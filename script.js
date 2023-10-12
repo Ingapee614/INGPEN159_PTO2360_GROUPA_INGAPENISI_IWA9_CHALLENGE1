@@ -11,11 +11,11 @@ const expenses = {
 }
   
 const tax = {
-    734: 3,
-    234: 20, // removed % and declare them as numbers
-    913: 12,
-    415: 38,
-    502: 42,
+    734:'3%',
+    234: '20%', 
+    913: '12%',
+    415: '38%',
+    502: '42%',
 }
 
 const rent = {
@@ -30,7 +30,7 @@ const rent = {
 
 // You can change below however you want
 
-const taxAsDecimal =parseFloat (tax[913] / 100); // convert number to percentage format
+const taxAsDecimal =parseFloat (tax[913] )/ 100; // convert number to percentage format
 const startingAfterTax = salary *(1 - taxAsDecimal); //  salary minus tax
 const type = lodging + size
 const rentAmount =rent.largeApartment;
