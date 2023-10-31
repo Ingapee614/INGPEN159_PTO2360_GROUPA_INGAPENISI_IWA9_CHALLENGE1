@@ -17,24 +17,22 @@ const tax = {
     415: '38%',
     502: '42%',
 }
-
 const rent = {
     none: 0,
-    smallRoom : 200,  // Removed qoutations, are used correct naming method
-    largeRoom : 300,
-    smallApartment : 400,
-    largeApartment : 800,
-    smallHouse : 1200,
-    largeHouse : 2400,
+    'small-room': 200,
+    'large-room': 300,
+    'small-apartment': 400,
+    'large-apartment': 800,
+    'small-house': 1200,
+    'large-house': 2400,
 }
 
 // You can change below however you want
 
 const taxAsDecimal =parseFloat (tax[913] )/ 100; // convert number to percentage format
 const startingAfterTax = salary *(1 - taxAsDecimal); //  salary minus tax
-const type = lodging + size
-const rentAmount =rent.largeApartment;
-const totalExpences= expenses.transport + expenses.food + rentAmount;
+const type = `${size}-${lodging}`
+const totalExpences= expenses.transport + expenses.food +rent [type];
 const balance = startingAfterTax - totalExpences;
 
 console.log('R',balance.toFixed(2));
